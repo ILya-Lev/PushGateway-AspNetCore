@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<!-- Suppresses missing XML comments warnings -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+		<PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1" />
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+		<PackageReference Include="Serilog.Enrichers.CorrelationId" Version="3.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\PushGateway.Client\PushGateway.Client.csproj" />
+	</ItemGroup>
+
+</Project>
